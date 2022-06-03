@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container mt-3">
+        <form action="/movies/create/" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class="btn-bd-primary" type="submit" value="Добавить">
+        </form>
+    </div>
+{% endblock %}

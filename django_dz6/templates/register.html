@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% if messages %}
+    {% for messages in messages %}
+        {% if  messages.tags == 'error' %}
+
+            <div class="alert alert-danger" role="alert">
+                {{ message }}
+  A simple primary alert—check it out!
+            </div>
+        {% else %}
+            <div class="alert alert-{{ messages.tags }}" role="alert">
+                {{ message }}
+  A simple primary alert—check it out!
+            </div>
+
+        {% endif %}
+    {% endfor %}
+{% endif %}
+{% block content %}
+    <div class="content">
+        <form action="/registration/" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="register" class="btn btn-warning">
+        </form>
+    </div>
+{% endblock %}

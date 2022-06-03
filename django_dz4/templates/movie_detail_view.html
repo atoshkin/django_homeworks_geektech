@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ detail.title }}</title>
+</head>
+<body>
+    <h5> {{ detail.title }}</h5>
+    <p>  {{ detail.descriptions}}</p>
+    <p>Created - {{ detail.created_at }}</p>
+    <p>Updated - {{ detail.updated_at }}</p>
+    <hr>
+<hr>
+<h4>Comments</h4>
+{% for i in review %}
+    <p>{{ i.author }}</p>
+    <p>{{ i.movie }}</p>
+    <p>{{ i.text }}</p>
+    <p> {{ i.created_at }}</p>
+    <p> {{ i.updated_at }}</p>
+    <hr>
+{% endfor %}
+</body>
+</html>

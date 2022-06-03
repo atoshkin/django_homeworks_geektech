@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>СПИСОК КИНО</title>
+</head>
+<body>
+{% for i in movie %}
+    <h5>{{ i.title }}</h5>
+    <p> {{ i.title }}</p>
+    <p> {{ i.descriptions }}</p>
+    <hr>
+{% endfor %}
+</body>
+</html>
